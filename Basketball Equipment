@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double tax = Double.parseDouble(scanner.nextLine());
+        
+        double shoes = tax * 0.60;
+        double outfit = shoes * 0.80;
+        double ball = outfit / 4;
+        double extra = ball / 5;
+        
+        double sum =  tax + shoes + outfit + ball + extra;
+
+        System.out.println(sum);
+    }
+}
