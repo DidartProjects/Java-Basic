@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Repainting {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int nylonSize = Integer.parseInt(scanner.nextLine());
+        int paintLiters = Integer.parseInt(scanner.nextLine());
+        int diluentLiters = Integer.parseInt(scanner.nextLine());
+        int days = Integer.parseInt(scanner.nextLine());
+
+        double nylonPrice = 1.50;
+        double paintPrice = 14.50;
+        double diluentPrice = 5;
+        double bagsPrice = 0.40;
+
+        double expenses = (nylonSize + 2) * nylonPrice + paintLiters * 1.10 * paintPrice + diluentLiters * diluentPrice + bagsPrice;
+        double workersExpenses = days * (expenses * 0.30);
+        double totalExpenses = workersExpenses + expenses;
+
+        System.out.println(String.format("Total expenses: %.2f lv.", totalExpenses));
+    }
+}
+
+    
