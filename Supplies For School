@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SuppliesForSchool {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int pensCount = Integer.parseInt(scanner.nextLine());
+        int markersCount = Integer.parseInt(scanner.nextLine());
+        int liters = Integer.parseInt(scanner.nextLine());
+        int discount = Integer.parseInt(scanner.nextLine());
+
+        double finalPricePens = pensCount * 5.80;
+        double finalPriceMarkers = markersCount * 7.20;
+        double finalPriceLiquid = liters * 1.20;
+
+        double sum = finalPricePens + finalPriceMarkers + finalPriceLiquid;
+
+        sum = sum - (discount / 100.0) * sum;
+        
+        System.out.println(sum);
+    }
+}
