@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class PetShop {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int dogsCount = Integer.parseInt(scanner.nextLine());
+        int animalsCount = Integer.parseInt((scanner.nextLine()));
+
+        double dogFoodPrice = 2.50;
+        double animalsFoodPrice = 4;
+
+        double sumDogFood = dogsCount * 2.50;
+        double sumAnimalsFood = animalsCount * 4;
+
+        double totalSum = sumDogFood + sumAnimalsFood;
+
+        System.out.printf("%.2f lv.", totalSum);
+    }
+}
