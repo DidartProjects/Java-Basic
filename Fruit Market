@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class FruitMarket {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double strawberryPrice = Double.parseDouble(scanner.nextLine());
+        double bananaKg = Double.parseDouble(scanner.nextLine());
+        double orangesKg = Double.parseDouble(scanner.nextLine());
+        double raspberriesKg = Double.parseDouble(scanner.nextLine());
+        double strawberryKg = Double.parseDouble(scanner.nextLine());
+
+        double sumStrawberry = strawberryKg * strawberryPrice;
+
+        double raspberriesPrice = strawberryPrice / 2;                            //strawberryPrice - 0.50 * strawberryPrice
+        double sumRaspberries = raspberriesKg * raspberriesPrice;
+
+        double orangePrice = raspberriesPrice - 0.40 * raspberriesPrice;          //0.6 * raspberriesPrice
+        double sumOranges = orangesKg * orangePrice;
+
+        double bananaPrice = raspberriesPrice - 0.80 * raspberriesPrice;          //0.2 * raspberriesPrice
+        double sumBanana = bananaKg * bananaPrice;
+
+        double finalPrice = sumStrawberry + sumRaspberries + sumOranges + sumBanana;
+
+        System.out.printf("%.2f", finalPrice);
+    }
+}
